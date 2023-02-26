@@ -50,6 +50,10 @@ header {
     /*Opacity end*/
 }
 
+header img{
+    height: 90px;
+}
+
 header,
 #rightHeader,
 #rightHeader ul,
@@ -147,4 +151,17 @@ form {
     background-color: #205055;
     border-radius: 5px;
     border: 2px solid white;
+}
+
+form section{
+    position: relative;
+}
+
+form i {
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    color: grey;
+    padding-top: 2%;
+    
 }

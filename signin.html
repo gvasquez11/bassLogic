@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/signin.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@300&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d24920b36a.js" crossorigin="anonymous"></script>
+    <title>Bass Logic - Sign In</title>
 </head>
 <body>
     
 <header>
-    <span>Bass Logic</span>
+    <img src="logo2.png" alt="Bass Logic">
     <section id="rightHeader">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -23,15 +28,20 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="naruto@hiddenleaf.com"><br>
     
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br>
-    
+        <section>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <i class="fa-solid fa-eye-slash" id="togglePassword"></i>
+            <br>
+        </section>
+        
+
         <input type="submit" value="Sign In" id="submitButton">
     </form>
 
 
 </main>
 
-
+<script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

@@ -49,6 +49,11 @@ header {
     opacity: 0.8;
     /*Opacity end*/
 }
+
+header img{
+    height: 90px;
+}
+
 header, #rightHeader, #rightHeader ul, #about{
     display: flex;
     justify-content: space-between;

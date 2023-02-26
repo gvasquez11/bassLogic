@@ -51,6 +51,10 @@ header {
 
 
 }
+header img{
+    height: 90px;
+}
+
 header, #rightHeader, #rightHeader ul, #about{
     display: flex;
     justify-content: space-between;
@@ -168,7 +172,7 @@ main a{
     padding-left: 3%;
     height: 100vh;
     border-bottom: 2px solid rgb(172, 170, 170);
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 #about section{
