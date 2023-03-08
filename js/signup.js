@@ -52,6 +52,7 @@ function showPassword(){
         let userName = `${fname}.${lname}`;
         userName = userName.toLowerCase();
 
+
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
@@ -80,4 +81,9 @@ function showPassword(){
                 // ..
                 alert(errorMessage)
             });
+
+
+
     })
+
+

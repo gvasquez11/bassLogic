@@ -24,7 +24,37 @@
     </header>
     
     <main>
-        <h1>Student Dashboard</h1>
+        <h1>Student Dashboard: Schedule a lesson</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="instructor">Instructor</label>
+            <select name="instructors" id="instructor">
+                <option value="instruct1">Gregory Vasquez</option>
+                <option value="instruct2">Naomi Bacop</option>
+                <option value="instruct3">Joey Arteaga</option>
+            </select>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+        
+            <button type="submit" id="formButtom">Book Appointment</button>
+        </form>
+
+
     </main>
 
 

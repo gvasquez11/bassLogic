@@ -20,7 +20,7 @@ function showPassword(){
  // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
-    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
     import { getDatabase, update, ref } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
     // TODO: Add SDKs for Firebase products that you want to use
@@ -41,7 +41,7 @@ function showPassword(){
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-    const auth = getAuth();
+    const auth = getAuth(app);
     const database = getDatabase(app);
 
     submitButton.addEventListener('click', (e) =>{
@@ -61,7 +61,7 @@ function showPassword(){
 
                         // User is signed in, see docs for a list of available properties
                         // https://firebase.google.com/docs/reference/js/firebase.User
-                        location.href = "studentPage.html"
+                        // location.href = "studentPage.html"
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -71,4 +71,15 @@ function showPassword(){
 
     })
 
- 
+    const checkAuthState = async() => {
+        onAuthStateChanged(auth,user => {
+            if(user){
+                location.href = "studentPage.html"
+            }
+            else{
+                alert('Please Sign In or create an account')
+            }
+        })
+    }
+
+    checkAuthState();
