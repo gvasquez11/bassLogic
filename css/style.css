@@ -267,15 +267,22 @@ footer ul li {
 .wrapperResource {
     display: flex;
     flex-wrap: wrap;
-   text-align: center;
+    text-align: center;
+    justify-content: space-around;
+    margin: 0 5%;
 }
 .wrapperResource section{
-    flex-basis: 50%;
+    flex-basis: 45%;
+
 }
 
 
-.wrapperResource img {
-    width: 50%;
+/* .wrapperResource img {
+    width: 100%;
+} */
+
+.resourceImg{
+    width: 100%;
 }
 
 /******************************************
