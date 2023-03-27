@@ -2,7 +2,7 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
     import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
-    import { getDatabase, update, ref } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+    import { getDatabase, set, get, update, remove, ref, child } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
     import {getFirestore, collection, getDocs} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 
     // TODO: Add SDKs for Firebase products that you want to use
@@ -21,25 +21,35 @@
     };
 
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    const app = initializeApp(firebaseConfig);  
     const auth = getAuth();
     const database = getDatabase(app);
-    const db = getFirestore(app);
-    
 
-    const colRef = collection(db, 'appointments')
-    getDocs(colRef).then((snapshot) => {
-        let appointments = []
-        snapshot.docs.forEach(doc => {
-            appointments.push({...doc.data(), id: doc.id})
-        })
-        console.log(appointments[1].name)
-    }).catch(err => {
-        console.log(err.message)
-    })
+    let date = document.querySelector('#date');
+    let time = document.querySelector('#time');
+    let instructor = document.querySelector('#instructor');
+    let message = document.querySelector('#message');
+
+    let timeData = document.querySelector('#timeData');
+    let dateData = document.querySelector('#dateData');
+    let instructorData = document.querySelector('#instructorData')
 
 
+    document.getElementById("buttonOne").addEventListener('click', SetLesson);
+    let updateButton = document.querySelector("#buttonTwo").addEventListener('click', updateLesson);
+    document.getElementById("buttonThree").addEventListener('click', cancelLesson)
+
+
+    // const colRef = collection(db, 'appointments')
+    // getDocs(colRef).then((snapshot) => {
+    //     let appointments = []
+    //     snapshot.docs.forEach(doc => {
+    //         appointments.push({...doc.data(), id: doc.id})
+    //     })
+    //     console.log(appointments[1].name)
+    // }).catch(err => {
+    //     console.log(err.message)
+    // })
 
     submitButton.addEventListener('click', (e) =>{
 
@@ -57,14 +67,82 @@
 
     })
 
-    onAuthStateChanged(auth, (user) => {
+      onAuthStateChanged(auth, (user) => {
     if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
         console.log(user)
+        getLesson();
         // ...
     } else {
         // User is signed out
         // ...
     }
     });
+
+    function SetLesson(){
+        const user = auth. currentUser
+
+        let lesson = {
+            Time: time.value, 
+            Date: date.value,
+            Instructor: instructor.value,
+            Message: message.value}
+
+
+        update(ref(database, 'users/' + user.uid), {
+         Lesson : lesson
+         
+        }).then(()=>{
+            alert("Lesson scheduled succsessfully!")
+        }).catch((error) => {
+        // An error happened.
+            alert(error)
+            console.log(error)
+        });
+
+    }
+   
+    function updateLesson(){
+
+    }
+
+    function cancelLesson(){
+        const user = auth. currentUser
+        remove(ref(database, 'users/' + user.uid  + '/Lesson'))
+        .then(() =>{
+            alert('Successfully Cancled Lesson')
+        }).catch((error) => {
+        // An error happened.
+            alert(error)
+            console.log(error)
+        });
+
+    }
+
+    function getLesson(){
+        const user = auth. currentUser;
+        const dbref = ref(database);
+
+        get(child(dbref,'users/' + user.uid  + '/Lesson'))
+        .then((snapshot) =>{
+            if(snapshot.exists()){
+                document.getElementById("defaultInfo").style.display = "none";
+                timeData.innerHTML = snapshot.val().Time;
+                dateData.innerHTML = snapshot.val().Date;
+                instructorData.innerHTML = snapshot.val().Instructor
+            }
+            else{
+                document.getElementById("infoSection").style.display = "none";
+                document.getElementById("buttonThree").style.display = "none";
+
+            }
+        }).catch((error) => {
+        // An error happened.
+            alert(error)
+            console.log(error)
+        });
+
+    }
+
+

@@ -24,35 +24,44 @@
     </header>
     
     <main>
-        <h1>Student Dashboard: Schedule a lesson</h1>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
-        
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
-        
-            <label for="time">Time:</label>
-            <input type="time" id="time" name="time" required>
-
-            <label for="instructor">Instructor</label>
-            <select name="instructors" id="instructor">
-                <option value="instruct1">Gregory Vasquez</option>
-                <option value="instruct2">Naomi Bacop</option>
-                <option value="instruct3">Joey Arteaga</option>
-            </select>
-        
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-        
-            <button type="submit" id="formButtom">Book Appointment</button>
-        </form>
+        <h1>Student Dashboard</h1>
+        <section class="contentContainer">
+            <section class="innerContent">
+                <h2>Book, update, or cancel a lesson </h2>
+                <form>
+                
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+            
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                    <label for="instructor">Instructor</label>
+                    <select name="instructors" id="instructor">
+                        <option value="Gregory Vasquez">Gregory Vasquez</option>
+                        <option value="Naomi Bacop">Naomi Bacop</option>
+                        <option value="Joey Arteaga">Joey Arteaga</option>
+                    </select>
+            
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+            
+                    <button type="button" id="buttonOne" class="formButtom">Book Lesson</button>
+                    <button type="button" id="buttonTwo" class="formButtom">Update</button>
+                </form>
+            </section>
+            <section class="innerContent">
+                <h2>Current Lesson Scheduled</h2>
+                <section>
+                    <p id="defaultInfo"> You currently do not have any scheduled lessons</p>
+                    <p id="infoSection">
+                        Time: <span id="timeData">00:00</span> <br>
+                        Date: <span id="dateData">00/00/00</span> <br>
+                        Instructor: <span id="instructorData">Gregory Vasquez</span>
+                    </p>
+                    <button type="button" id="buttonThree" class="formButtom">Cancel</button>
+                </section>
+            </section>
+        </section>
 
 
     </main>
