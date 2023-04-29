@@ -210,6 +210,12 @@ main a{
     bottom: 0;
     height: 100%;
     cursor: pointer;
+    color: white;
+    
+}
+
+.resourceContainer a{
+    color: white;
 }
 
 

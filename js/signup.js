@@ -67,7 +67,7 @@ function showPassword(){
                 })
                     .then(() => {
                     // Data saved successfully!
-                    alert('User created successfully!');
+                    alert('User created successfully! \nPlease return to the home page to login.');
                     })
                     .catch((error) => {
                     // The write failed...
