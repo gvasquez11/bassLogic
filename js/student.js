@@ -36,7 +36,7 @@
 
 
     document.getElementById("buttonOne").addEventListener('click', SetLesson);
-    let updateButton = document.querySelector("#buttonTwo").addEventListener('click', updateLesson);
+    document.getElementById("buttonTwo").addEventListener('click',updateLesson);
     document.getElementById("buttonThree").addEventListener('click', cancelLesson)
 
 
@@ -104,19 +104,57 @@
     }
    
     function updateLesson(){
+        const user = auth. currentUser
+        if(date.value == '')
+        {
+            alert('You left the date blank!')
+        }
+        else if(time.value == '')
+        {
+            alert('You left time blank!')
+        }
+        else if(instructor.value == 'NULL')
+        {
+            alert('You left the instructor blank!')
+        }
+        else
+        {
+            let lesson = {
+            Time: time.value, 
+            Date: date.value,
+            Instructor: instructor.value,
+            Message: message.value}
+
+            update(ref(database, 'users/' + user.uid), {
+            Lesson : lesson
+            
+            }).then(()=>{
+                alert("Lesson scheduled succsessfully!")
+            }).catch((error) => {
+            // An error happened.
+                alert(error)
+                console.log(error)
+            });
+        }
+     
 
     }
 
     function cancelLesson(){
         const user = auth. currentUser
-        remove(ref(database, 'users/' + user.uid  + '/Lesson'))
-        .then(() =>{
-            alert('Successfully Cancled Lesson')
-        }).catch((error) => {
-        // An error happened.
-            alert(error)
-            console.log(error)
-        });
+       let confirmResponse = confirm('Are you sure you want to cancel your lesson?')
+
+        if(confirmResponse)
+        {
+            remove(ref(database, 'users/' + user.uid  + '/Lesson'))
+            .then(() =>{
+                alert('Successfully canceled Lesson')
+            }).catch((error) => {
+            // An error happened.
+                alert(error)
+                console.log(error)
+            });
+        }
 
     }
 
