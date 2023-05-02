@@ -184,3 +184,30 @@
     }
 
 
+    //functionality for showing Instructor info
+
+    document.querySelector('.arrow1').onclick = showInstructorOne;
+
+    function showInstructorOne(){
+
+        let arrow =  document.querySelector('.arrow1');
+        arrow.classList.toggle("arrowToggle1")
+
+        let showBio = document.querySelector('.bio1');
+        showBio.classList.toggle("toggleBio1")
+    }
+
+     document.querySelector('.arrow2').onclick = showInstructorTwo;
+
+    function showInstructorTwo(){
+
+        let arrow =  document.querySelector('.arrow2');
+        arrow.classList.toggle("arrowToggle2")
+
+        let showBio = document.querySelector('.bio2');
+        showBio.classList.toggle("toggleBio2")
+
+    }
+
+
+

@@ -110,12 +110,14 @@ header>span {
 }
 
 main{
-    margin: 10% 0;
+    margin: 5% 0;
     font-size: 20px;
 }
 
 main h1{
     text-align: center;
+    margin: 0;
+    
 }
 
 form {
@@ -180,4 +182,51 @@ textarea, #instructor, #nameData {
 
 #defaultInfo{
     text-align: center;
+}
+
+.instructorsContainer{
+    margin: 0 10%;
+}
+
+.instructor{
+    
+}
+
+.bottomLine {
+    width: 100%;
+    height: .5px;
+    background-color: #9fb8a6;
+    margin: 10px 0;
+}
+
+.instructorContent *{
+    max-width: 30%;
+}
+
+.instructorContent{
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+.bio1, .bio2{
+    border: 2px solid white;
+    padding: 10px;
+    align-items: center
+}
+
+.toggleBio1, .toggleBio2{
+    display: none;
+}
+
+.arrow1, .arrow2{
+    transform: scaleY(-1);
+}
+
+.arrowToggle1, .arrowToggle2{
+    transform: scaleY(1);
+}
+
+.arrow1:hover, .arrow2:hover{
+    cursor: pointer;
 }
