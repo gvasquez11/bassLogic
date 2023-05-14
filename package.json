@@ -1,0 +1,24 @@
+{
+  "name": "basslogic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gvasquez11/bassLogic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gvasquez11/bassLogic/issues"
+  },
+  "homepage": "https://github.com/gvasquez11/bassLogic#readme",
+  "dependencies": {
+    "chromedriver": "^113.0.0",
+    "selenium-webdriver": "^4.9.1"
+  }
+}

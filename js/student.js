@@ -209,5 +209,29 @@
 
     }
 
+    document.querySelector('.arrow3').onclick = showInstructorThree;
+
+     function showInstructorThree(){
+
+        let arrow =  document.querySelector('.arrow3');
+        arrow.classList.toggle("arrowToggle3")
+
+        let showBio = document.querySelector('.bio3');
+        showBio.classList.toggle("toggleBio3")
+
+    }
+
+    document.querySelector('.arrow4').onclick = showInstructorFour;
+
+     function showInstructorFour(){
+
+        let arrow =  document.querySelector('.arrow4');
+        arrow.classList.toggle("arrowToggle4")
+
+        let showBio = document.querySelector('.bio4');
+        showBio.classList.toggle("toggleBio4")
+
+    }
+
 
 

@@ -209,24 +209,24 @@ textarea, #instructor, #nameData {
    
 }
 
-.bio1, .bio2{
+.bio1, .bio2, .bio3, .bio4{
     border: 2px solid white;
     padding: 10px;
     align-items: center
 }
 
-.toggleBio1, .toggleBio2{
+.toggleBio1, .toggleBio2, .toggleBio3, .toggleBio4{
     display: none;
 }
 
-.arrow1, .arrow2{
+.arrow1, .arrow2, .arrow3, .arrow4{
     transform: scaleY(-1);
 }
 
-.arrowToggle1, .arrowToggle2{
+.arrowToggle1, .arrowToggle2, .arrowToggle3, .arrowToggle4{
     transform: scaleY(1);
 }
 
-.arrow1:hover, .arrow2:hover{
+.arrow1:hover, .arrow2:hover, .arrow3:hover, .arrow4:hover{
     cursor: pointer;
 }

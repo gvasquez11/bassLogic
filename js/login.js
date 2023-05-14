@@ -77,7 +77,7 @@ function showPassword(){
                 location.href = "studentPage.html"
             }
             else{
-                alert('Please Sign In or create an account')
+                // alert('Please Sign In or create an account')
             }
         })
     }
