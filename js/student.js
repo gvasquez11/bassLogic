@@ -129,7 +129,7 @@
             Lesson : lesson
             
             }).then(()=>{
-                alert("Lesson scheduled succsessfully!")
+                alert("Lesson updated succsessfully!")
             }).catch((error) => {
             // An error happened.
                 alert(error)
