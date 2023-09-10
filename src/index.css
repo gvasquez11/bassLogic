@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
   font-family: LabGrotesque, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: white;
