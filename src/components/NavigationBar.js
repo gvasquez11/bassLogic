@@ -18,7 +18,7 @@ function NavigationBar() {
     <>
         <header>
             <section className='realtive border-b'>
-                <section className='px-3 lg:container mx-auto'>
+                <section className='px-6'>
                     <section className='flex justify-between items-center'>
                         <section>
                             <img src={logo2} className='max-w-[5.5rem]' />
@@ -26,16 +26,16 @@ function NavigationBar() {
 
                         <section className='hidden md:flex'>
                             <ul className='flex space-x-4'>
-                                <li className='hover:underline hover:scale-110 hover:cursor-pointer'><a href="" ></a>Home</li>
-                                <li className='hover:underline hover:scale-110 hover:cursor-pointer'><a href=""></a>About</li>
-                                <li className='hover:underline hover:scale-110 hover:cursor-pointer'><a href=""></a>Resources</li>
+                                <li className='hover:underline hover:scale-110 hover:cursor-pointer md:text-2xl'><a href="" ></a>Home</li>
+                                <li className='hover:underline hover:scale-110 hover:cursor-pointer md:text-2xl'><a href=""></a>About</li>
+                                <li className='hover:underline hover:scale-110 hover:cursor-pointer md:text-2xl'><a href=""></a>Resources</li>
                             </ul>
                         </section>
                         <CoolMenuButton isOpen={isOpen} onClick={handleClick} genericHamburgerLine={genericHamburgerLine}/>
 
                         {/* Mobile View */}
                         <section className={isOpen ? 'fixed top-0 left-0 border-b border-b-white w-full  shadow-2xl h-[50%] bg-[#0e2729]' : 'fixed top-[-100%]' }>
-                                <section className='flex justify-between items-center px-3'>
+                                <section className='flex justify-between items-center px-6'>
                                     <section>
                                         <img src={logo2} className='max-w-[5.5rem]' />
                                     </section>

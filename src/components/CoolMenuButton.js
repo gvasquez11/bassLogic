@@ -4,13 +4,13 @@ function CoolMenuButton({isOpen, onClick, genericHamburgerLine}) {
   return (
     <>
         <button
-            className="block md:hidden h-12 w-12 flex flex-col justify-center items-center group"
+            className={!isOpen ? 'block md:hidden h-12 w-12 flex flex-col justify-center items-center group' : ''}
             onClick={onClick}
         >
             <div
                 className={`${genericHamburgerLine} ${
                     isOpen
-                        ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100"
+                        ? "rotate-45 translate-y-2 opacity-50 group-hover:opacity-100"
                         : "opacity-50 group-hover:opacity-100"
                 }`}
             />
@@ -18,7 +18,7 @@ function CoolMenuButton({isOpen, onClick, genericHamburgerLine}) {
             <div
                 className={`${genericHamburgerLine} ${
                     isOpen
-                        ? "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
+                        ? "-rotate-45 -translate-y-2 opacity-50 group-hover:opacity-100"
                         : "opacity-50 group-hover:opacity-100"
                 }`}
             />
