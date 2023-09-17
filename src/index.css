@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  font-family: LabGrotesque, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+body{
+  background-image: linear-gradient(#0e2729, #30757d);
+  background-attachment: fixed;
+  color: white;
+}
+
+.bg-hero{
+  background-image: url(assests//bassdrum.png);
+  background-size: cover;
+}
+
+.smallerimg{
+  width: 60%;
+}
