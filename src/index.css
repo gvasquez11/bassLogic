@@ -17,3 +17,7 @@ body{
   background-image: url(assests//bassdrum.png);
   background-size: cover;
 }
+
+.smallerimg{
+  width: 60%;
+}

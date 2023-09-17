@@ -5,7 +5,7 @@ import bassdrum from '../assests/bassdrum.png'
 function Hero() {
   return (
     <>
-      <section className="flex flex-col items-center space-y-5 h-screen my-[-100px] pt-[7rem] text-2xl text-center lg:flex-row lg:justify-center lg:text-4xl">
+      <section className="flex flex-col items-center space-y-5 h-screen my-[-100px] pt-[7rem] text-3xl text-center lg:flex-row lg:justify-center lg:text-4xl">
         <section className=''>
           <img src={bassdrum} alt="" className='rounded-[25px] w-[80%] mx-auto'/>
         </section>

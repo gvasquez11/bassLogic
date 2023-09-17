@@ -2,12 +2,13 @@ import React from 'react'
 import RCC from '../assests/RCC.jpg'
 
 function About() {
+
   return (
     <>
-        <section className='lg:flex justify-between items-center lg:pt-14 lg:px-10'>
-            <section className='lg:w-[50%]'>
-                <section className='text-xl px-5'>
-                    <h1 className='text-3xl pb-5 font-bold'>About Bass Logic</h1>
+        <section id='about' className='lg:flex justify-between items-center lg:pt-14 lg:px-10 pt-24'>
+            <section className='lg:w-[50%] '>
+                <section className='text-sm px-5 md:text-lg'>
+                    <h1 className='text-2xl pb-5 font-bold md:text-3xl'>About Bass Logic</h1>
                     <p className='py-2'>
                         Bass Logic is a website dedicated to teaching marching bass drum fundamentals to students who aspire to take their bass drumming skills to the next level. Our website offers comprehensive tutorials and guides that cover everything from tuning and muffling your bass drum to advanced techniques that can enhance your playing.
                     </p>
