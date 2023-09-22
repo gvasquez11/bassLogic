@@ -5,7 +5,7 @@ function About() {
 
   return (
     <>
-        <section id='about' className='lg:flex justify-between items-center lg:pt-14 lg:px-10 pt-24'>
+        <section id='about' className='lg:flex justify-between items-center  lg:px-10'>
             <section className='lg:w-[50%] '>
                 <section className='text-sm px-5 md:text-lg'>
                     <h1 className='text-2xl pb-5 font-bold md:text-3xl'>About Bass Logic</h1>
