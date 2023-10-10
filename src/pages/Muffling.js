@@ -1,6 +1,6 @@
 import React from 'react'
 import NavigationBar from '../components/NavigationBar'
-import Spray from '../assests/spray.PNG'
+import Spray from '../assets/spray.PNG'
 import Footer from '../components/Footer'
 
 function MuffleHero(){

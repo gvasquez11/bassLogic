@@ -1,8 +1,8 @@
 import React from 'react'
-import tune from '../assests/tune.jpg'
-import foam from '../assests/foam.jpg'
-import sheetMusic from '../assests/sheetMusic.jpg'
-import schedule from '../assests/schedule.jpg'
+import tune from '../assets/tune.jpg'
+import foam from '../assets/foam.jpg'
+import sheetMusic from '../assets/sheetMusic.jpg'
+import schedule from '../assets/schedule.jpg'
 import { Link } from "react-router-dom";
 
 function Resources() {
@@ -20,15 +20,15 @@ function Resources() {
                 <section className='lg:px-10 lg:text-center'>
                     <section className='py-6'>
                         <section>
-                            <h1 className='font-bold'>Bass Tunning</h1>
+                            <h1 className='font-bold'>Bass Tuning</h1>
                         </section>
                         <section>
-                            <Link to="/tunning"><img src={tune} alt="Bass Tunning" className='w-[100%] lg:w-[70%] mx-auto' /></Link>
+                            <Link to="/tuning"><img src={tune} alt="Bass Tuning" className='w-[100%] lg:w-[70%] mx-auto' /></Link>
                         </section>
                     </section>
                     <section className='py-6'>
                         <section>
-                            <h1 className='font-bold'>How to prroperly muffle your bass drums</h1>
+                            <h1 className='font-bold'>How to properly muffle your bass drums</h1>
                         </section>
                         <section>
                             <Link to="/muffling">

@@ -1,6 +1,6 @@
 import React from 'react'
 import NavigationBar from '../components/NavigationBar'
-import logo from '../assests/logo2.png'
+import logo from '../assets/logo2.png'
 
 function Extra() {
   return (

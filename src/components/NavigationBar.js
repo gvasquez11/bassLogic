@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import logo2 from '../assests/logo2.png'
+import logo2 from '../assets/logo2.png'
 import CoolMenuButton from './CoolMenuButton';
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
@@ -45,7 +45,7 @@ function NavigationBar() {
                         <CoolMenuButton isOpen={isOpen} onClick={handleClick} genericHamburgerLine={genericHamburgerLine}/>
 
                         {/* Mobile View */}
-                        <section className={isOpen ? 'fixed top-0 left-0 border-b border-b-white w-full  shadow-2xl h-[50%] bg-[#0e2729] ease-in-out duration-500' : 'fixed top-[-100%]' }>
+                        <section className={isOpen ? 'fixed top-0 left-0 border-b border-b-white w-full shadow-2xl h-[50%] bg-[#0e2729] ease-in-out duration-500' : 'fixed top-[-100%] left-0 border-b border-b-white w-full h-[50%] bg-[#0e2729] duration-500 ease-in-out' }>
                                 <section className='flex justify-between items-center px-6'>
                                     <section>
                                         <img src={logo2} className='max-w-[5.5rem]' />

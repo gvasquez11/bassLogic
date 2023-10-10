@@ -1,6 +1,6 @@
 import React from 'react'
 import Typed from 'react-typed'
-import bassdrum from '../assests/bassdrum.png'
+import bassdrum from '../assets/bassdrum.png'
 
 function Hero() {
   return (
@@ -15,7 +15,7 @@ function Hero() {
             <h2>What you'll learn with Bass Logic</h2>
             <Typed
             className='font-bold text-3xl  lg:text-5xl'
-              strings={['Technique', 'Advanced Rhythms', 'Tunning', 'Muffling']}
+              strings={['Technique', 'Advanced Rhythms', 'Tuning', 'Muffling']}
               typeSpeed={90}
               backSpeed={60}
               loop
