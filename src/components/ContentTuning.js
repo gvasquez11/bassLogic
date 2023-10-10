@@ -1,7 +1,6 @@
 import React from 'react'
 import edges from '../assests/edges.jpg'
 import head from '../assests/headOnShell.jpg'
-import lug from '../assests/lug.jpg'
 import tunePattern from '../assests/tunePattern.jpg'
 import Footer from './Footer'
 
@@ -17,7 +16,7 @@ return(
 )
 }
 
-function ContentTunning() {
+function ContentTuning() {
   return (
     <>
         <section>
@@ -34,4 +33,4 @@ function ContentTunning() {
   )
 }
 
-export default ContentTunning
+export default ContentTuning
