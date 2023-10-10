@@ -1,8 +1,8 @@
 import React from 'react'
-import tune from '../assests/tune.jpg'
-import foam from '../assests/foam.jpg'
-import sheetMusic from '../assests/sheetMusic.jpg'
-import schedule from '../assests/schedule.jpg'
+import tune from '../assets/tune.jpg'
+import foam from '../assets/foam.jpg'
+import sheetMusic from '../assets/sheetMusic.jpg'
+import schedule from '../assets/schedule.jpg'
 import { Link } from "react-router-dom";
 
 function Resources() {

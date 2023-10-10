@@ -1,7 +1,7 @@
 import React from 'react'
-import edges from '../assests/edges.jpg'
-import head from '../assests/headOnShell.jpg'
-import tunePattern from '../assests/tunePattern.jpg'
+import edges from '../assets/edges.jpg'
+import head from '../assets/headOnShell.jpg'
+import tunePattern from '../assets/tunePattern.jpg'
 import Footer from './Footer'
 
 function Content({subheading, instructions, imgsrc}){

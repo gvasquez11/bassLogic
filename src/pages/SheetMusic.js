@@ -1,6 +1,5 @@
 import React from 'react'
 import NavigationBar from '../components/NavigationBar'
-import { HashLink } from 'react-router-hash-link';
 import eights from '../sheetmusic/eight-on-a-hand.pdf'
 import eightsCover from '../assests/eightsCover.PNG'
 import juansTacos from '../sheetmusic/jt.pdf'

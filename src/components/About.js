@@ -1,5 +1,5 @@
 import React from 'react'
-import RCC from '../assests/RCC.jpg'
+import RCC from '../assets/RCC.jpg'
 
 function About() {
 

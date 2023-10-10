@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import logo2 from '../assests/logo2.png'
+import logo2 from '../assets/logo2.png'
 import CoolMenuButton from './CoolMenuButton';
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';

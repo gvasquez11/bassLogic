@@ -1,6 +1,6 @@
 import React from 'react'
 import Typed from 'react-typed'
-import bassdrum from '../assests/bassdrum.png'
+import bassdrum from '../assets/bassdrum.png'
 
 function Hero() {
   return (

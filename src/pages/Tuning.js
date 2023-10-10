@@ -3,7 +3,7 @@ import NavigationBar from '../components/NavigationBar'
 import HeroTuning from '../components/HeroTuning'
 import ContentTuning from '../components/ContentTuning'
 
-function Tunning() {
+function Tuning() {
   return (
     <>
         <NavigationBar/>
@@ -13,4 +13,4 @@ function Tunning() {
   )
 }
 
-export default Tunning
+export default Tuning
